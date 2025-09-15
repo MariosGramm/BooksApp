@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Search</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script type="module" src="./js/main.js"></script>
 </head>
-<body class="bg-primary">
+<body class="bg-primary text-white">
     <div class="d-flex flex-column justify-content-center align-items-center">
-        <div id="SearchBook" class="text-white text-center mt-3 mb-3">
+        <div id="SearchBook" class="text-center mt-3 mb-3">
             <h2>Search a Book</h2>
         </div>
 
         <div id="SearchBar">
-            <form role="search" class="d-flex">
-                <input type="search" class="form-control me-2" placeholder="Please enter a title">
+            <form role="search" class="d-flex align-items-center">
+                <input id="searchInput" type="search" class="form-control me-2" placeholder="Please enter a title">
                 <button class="btn btn-light">Search</button>
+                <img id="LoadingGIF" src="https://media.tenor.com/On7kvXhzml4AAAAi/loading-gif.gif" alt="Loading..." class="ms-2" style="height: 24px;" hidden>
             </form>
         </div>
-        
     </div>
-    
+        
+        <div id="BookPic" class="d-flex justify-content-center mt-5">
+            <img hidden id="BookImage" class="img-fluid" style="max-height:120px;" alt="Μη διαθέσιμη εικόνα">
+        </div>
+
+        <div id="BookInfo" class="text-center mt-5" hidden>
+            <h3 id="BookTitle">Book Title</h3>
+            <p id="BookDescription" class="mt-3">Book Description will appear here</p>
+            <a id="bookLink" href="#" target="_blank" class="text-white underline mt-2">View on Google Books</a>
+        </div>
+        
+        <div class="text-center mt-4">
+            <div id="NotFound">
+                <span hidden>No books were found according to the search criteria.</span>
+            </div>
+
+            <div id="Error">
+                <span hidden>An error occured during the call of the service.</span>
+            </div>
+        </div>
 </body>
 </html>

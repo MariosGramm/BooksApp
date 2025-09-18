@@ -12,7 +12,7 @@ A simple web application built with JavaScript to search and display books using
 ## Deployment
 This project uses **GitHub Actions** to automatically deploy to **Azure App Service** whenever changes are pushed to the `main` branch.
 
-### Steps we took:
+### Steps I took:
 1. Developed the client-side JavaScript application that queries Google Books API.
 2. Created an Azure App Service for hosting the app.
 3. Configured a GitHub Actions workflow to deploy the app to Azure on each push.
